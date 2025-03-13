@@ -17,12 +17,13 @@ class WithdrawRequest extends Model
     public function vendor(){
         return $this->belongsTo(Vendor::class);
     }
-    public function method(){
-        return $this->belongsTo(WithdrawalMethod::class,'withdrawal_method_id');
-    }
     public function store(){
         return $this->belongsTo(Store::class,'vendor_id','vendor_id');
     }
+    public function method(){
+        return $this->belongsTo(WithdrawalMethod::class,'withdrawal_method_id');
+    }
+
 
     public function disbursementMethod(){
         return $this->belongsTo(DisbursementWithdrawalMethod::class,'withdrawal_method_id');

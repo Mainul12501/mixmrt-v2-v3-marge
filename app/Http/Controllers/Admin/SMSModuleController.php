@@ -11,7 +11,6 @@ use App\Models\Setting;
 
 class SMSModuleController extends Controller
 {
-    // v2.8.1 checked
     public function sms_index()
     {
         $published_status = addon_published_status('Gateways');

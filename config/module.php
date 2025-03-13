@@ -134,7 +134,6 @@ return [
         'description'=>'',
         'is_rental'=>false,
     ],
-
     'rental'=>[
         'order_status'=>['accepted'=>false],
         'order_place_to_schedule_interval'=>false,

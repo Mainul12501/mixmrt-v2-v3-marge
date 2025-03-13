@@ -1,12 +1,13 @@
 @extends('layouts.admin.app')
 
 @section('title', translate('messages.Notification Channels'))
+@section('notification_setup_type')
+active
+@endsection
 @section('notification_setup')
 active
 @endsection
-@section('notification_setup_type')
-    active
-@endsection
+
 @section('content')
     <div class="content container-fluid">
 

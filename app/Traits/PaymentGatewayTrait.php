@@ -176,8 +176,8 @@ trait PaymentGatewayTrait
                 "NOK" => "Norwegian Krone",
                 "SEK" => "Swedish Krona",
                 "SGD" => "Singapore Dollar",
-                "HKD" => "Hong Kong Dollar",
                 "RON" => "Romanian leu (RON) currency",
+                "HKD" => "Hong Kong Dollar"
             ],
             "swish" => [
                 "SEK" => "Swedish Krona"

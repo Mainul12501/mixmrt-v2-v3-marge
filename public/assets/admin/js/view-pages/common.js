@@ -185,7 +185,7 @@ $(document).ready(function () {
     });
 
     $(".read-url").on("change", function () {
-        readURL(this);
+        readUrl(this);
     });
 });
 $(document).on("ready", function () {
@@ -466,6 +466,15 @@ $(document).on("click", ".confirm-Toggle", function () {
             $("#extra_packaging_amount")
                 .attr("readonly", true)
                 .removeAttr("required");
+        }
+    }
+    if (toggle_id === "order_cancelation_rate_limit_status") {
+        if ($("#order_cancelation_rate_limit_status").is(":checked")) {
+            $("#order_cancelation_rate_block_limit").removeAttr("readonly").attr("required", true);
+            $("#order_cancelation_rate_warning_limit").removeAttr("readonly").attr("required", true);
+        } else {
+            $("#order_cancelation_rate_block_limit").attr("readonly", true).removeAttr("required");
+            $("#order_cancelation_rate_warning_limit").attr("readonly", true).removeAttr("required");
         }
     }
 });

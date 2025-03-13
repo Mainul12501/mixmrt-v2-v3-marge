@@ -10,14 +10,13 @@ use Illuminate\Support\Carbon;
 use App\Models\BusinessSetting;
 use App\CentralLogics\SMS_module;
 use Illuminate\Support\Facades\DB;
+use App\Mail\UserPasswordResetMail;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Modules\Gateways\Traits\SmsGateway;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\Password;
-
-use App\Mail\UserPasswordResetMail;
 
 class PasswordResetController extends Controller
 {
@@ -65,6 +64,10 @@ class PasswordResetController extends Controller
                 ]);
 
 
+            if(env('APP_MODE') == 'test'){
+                return response()->json(['message' => translate('messages.Use_test_OTP')], 200);
+            }
+
 
             $response =null;
             $published_status =0;
@@ -81,14 +84,14 @@ class PasswordResetController extends Controller
 
             try {
                 $mailResponse=null;
-                if (config('mail.status') && Helpers::get_mail_status('forget_password_mail_status_user') == '1' && $customer['email']) {
-                    Mail::to($customer['email'])->send(new UserPasswordResetMail($token,$customer['f_name']));
-                    $mailResponse='success';
-                }
+                    if (config('mail.status') && Helpers::get_mail_status('forget_password_mail_status_user') == '1' && $customer['email']) {
+                        Mail::to($customer['email'])->send(new UserPasswordResetMail($token,$customer['f_name']));
+                        $mailResponse='success';
+                    }
             } catch (\Throwable $th) {
-                $mailResponse=null;
-                info($th->getMessage());
-            }
+                    $mailResponse=null;
+                    info($th->getMessage());
+                }
 
             if($response == 'success' && $mailResponse == 'success')
             {
@@ -107,7 +110,7 @@ class PasswordResetController extends Controller
                 return response()->json([
                     'errors' => [
                         ['code' => 'otp', 'message' => translate('messages.failed_to_send_sms')]
-                    ]], 403);
+                ]], 403);
             }
         }
         return response()->json(['errors' => [

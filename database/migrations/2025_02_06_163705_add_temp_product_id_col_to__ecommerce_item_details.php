@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if (!Schema::hasColumns('ecommerce_item_details', ['temp_product_id'])) {
-            Schema::table('ecommerce_item_details', function (Blueprint $table) {
-                $table->foreignId('temp_product_id')->nullable();
-            });
-        }
-
+        Schema::table('ecommerce_item_details', function (Blueprint $table) {
+            $table->foreignId('temp_product_id')->nullable();
+        });
     }
 
     /**

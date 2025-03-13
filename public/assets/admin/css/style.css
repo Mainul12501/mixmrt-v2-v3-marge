@@ -760,9 +760,9 @@ aside .nav-link {
 }
 
 .navbar-vertical-aside-mini-mode
-.navbar-vertical:not([class*="container"])
-.navbar-nav
-.nav-link {
+    .navbar-vertical:not([class*="container"])
+    .navbar-nav
+    .nav-link {
     padding-inline-start: 1.75rem !important;
 }
 
@@ -1103,10 +1103,10 @@ aside .nav-link {
 }
 
 .navbar-vertical
-.navbar-nav.nav-tabs
-.navbar-vertical-aside-has-menu
-li.active
-> .nav-link {
+    .navbar-nav.nav-tabs
+    .navbar-vertical-aside-has-menu
+    li.active
+    > .nav-link {
     padding-inline-end: 28px;
     padding-inline-start: 52px;
 }
@@ -1455,11 +1455,11 @@ li.active
 }
 
 .top--resturant
-li
-.top--resturant-item
-.top--resturant-item-content
-.info
-span {
+    li
+    .top--resturant-item
+    .top--resturant-item-content
+    .info
+    span {
     font-size: 14px;
 }
 
@@ -2575,12 +2575,9 @@ textarea.form-control[readonly] {
     -moz-transition: all ease 0.3s;
 }
 
- .select2:not(.select2-container--open) .select2-search--inline {
+/* .select2:not(.select2-container--open) .select2-search--inline {
     height: 2px;
-}
-.text--title {
-    color: var(--title-clr);
-}
+} */
 
 .toggle-switch-sm .toggle-switch-label {
     width: 44px;
@@ -2595,9 +2592,9 @@ textarea.form-control[readonly] {
 }
 
 .toggle-switch-sm
-.toggle-switch-input:checked
-+ .toggle-switch-label
-.toggle-switch-indicator {
+    .toggle-switch-input:checked
+    + .toggle-switch-label
+    .toggle-switch-indicator {
     transform: translate3d(100%, 50%, 0) !important;
 }
 
@@ -2720,9 +2717,9 @@ textarea.form-control[readonly] {
 }
 
 .switch--custom-label
-.toggle-switch-input:checked
-+ .toggle-switch-label
-.toggle-switch-indicator {
+    .toggle-switch-input:checked
+    + .toggle-switch-label
+    .toggle-switch-indicator {
     transform: translate3d(18px, 50%, 0);
 }
 
@@ -2852,7 +2849,7 @@ a.badge-soft-primary:hover {
 .form--check .form-check-input[checked="checked"],
 .form--check .form-check-input[type="checkbox"]:checked {
     background: url("./images/check-mark.png") #f4f5f7 no-repeat center
-    center/contain;
+        center/contain;
     box-shadow: 0 0 0 3px #f4f5f7, 0 0 0 4px #c4c8d4;
 }
 
@@ -4541,10 +4538,10 @@ td .amount--input {
 }
 
 .select2
-.select2-container
-.select2-container--default
-.select2-container--above
-.select2-container--focus {
+    .select2-container
+    .select2-container--default
+    .select2-container--above
+    .select2-container--focus {
     width: 100% !important;
 }
 
@@ -5960,11 +5957,11 @@ textarea.form-control.h--45 {
         width: unset;
         font-size: 11px;
     }
-     .order-invoice-right .btn-outline-primary {
+    /* .order-invoice-right .btn-outline-primary {
         padding: 5px 10px;
         width: unset;
         font-size: 11px;
-    }
+    } */
     .max-sm-flex-grow-1 {
         flex-grow: 1;
     }
@@ -7657,7 +7654,7 @@ ul.delivery--information-single li:not(:last-child) {
 
 .__nav-module-checkboxes .form-check-input:checked ~ .form-check-label::before {
     background: url("./images/check-mark-2.png") #009faa no-repeat center
-    center/15px;
+        center/15px;
 }
 
 .__nav-module-checkboxes .form-check {
@@ -8298,8 +8295,8 @@ ul.delivery--information-single li:not(:last-child) {
 }
 
 .__user-dashboard-card
-.__user-dashboard-card-thumbs
-.more-icon:not(:first-child) {
+    .__user-dashboard-card-thumbs
+    .more-icon:not(:first-child) {
     margin-inline-start: -10px;
 }
 
@@ -9890,7 +9887,7 @@ body > .initial-38-1 {
 .card-header-shadow {
     border: none;
     box-shadow: 0px 0px 2px rgba(145, 158, 171, 0.2),
-    0px 6px 12px -4px rgba(145, 158, 171, 0.05);
+        0px 6px 12px -4px rgba(145, 158, 171, 0.05);
 }
 
 .digital_payment_methods strong {
@@ -10134,8 +10131,8 @@ body > .initial-38-1 {
 }
 
 .emojionearea
-.emojionearea-picker.emojionearea-picker-position-top
-.emojionearea-wrapper:after {
+    .emojionearea-picker.emojionearea-picker-position-top
+    .emojionearea-wrapper:after {
     right: 137px !important;
 }
 
@@ -10748,8 +10745,8 @@ body > .initial-38-1 {
     }
 }
 .select2-container--default
-.select2-selection--multiple
-.select2-selection__choice,
+    .select2-selection--multiple
+    .select2-selection__choice,
 .bootstrap-tagsinput .tag {
     background: rgba(0, 159, 170, 0.15) !important;
     border-radius: 5px !important;
@@ -10757,9 +10754,9 @@ body > .initial-38-1 {
 }
 
 .pickup-zone-tag
-.select2-container--default
-.select2-selection--multiple
-.select2-selection__choice,
+    .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice,
 .pickup-zone-tag .bootstrap-tagsinput .tag {
     background: rgba(51, 66, 87, 0.06) !important;
     border-radius: 33px !important;
@@ -13708,9 +13705,9 @@ video#VisaChipCardVideo {
 /* Mutiple Select2 */
 
 .multiple-select2
-+ .select2-container--default
-.select2-selection--multiple
-.select2-selection__choice {
+    + .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice {
     display: inline-flex;
     align-items: center;
     padding: 0 5px;
@@ -13719,51 +13716,51 @@ video#VisaChipCardVideo {
     border-radius: 4px;
 }
 .multiple-select2
-+ .select2-container--default
-.select2-selection--multiple
-.select2-selection__choice__remove {
+    + .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice__remove {
     cursor: pointer;
     margin-left: 5px;
     color: #333;
 }
 .multiple-select2
-+ .select2-container--default
-.select2-selection--multiple
-.close-icon {
+    + .select2-container--default
+    .select2-selection--multiple
+    .close-icon {
     cursor: pointer;
     color: #00000078;
 }
 .multiple-select2
-+ .select2-container--default
-.select2-selection--multiple
-.select2-selection__rendered
-li {
+    + .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__rendered
+    li {
     list-style: none;
 }
 .multiple-select2
-+ .select2-container--default
-.select2-selection--multiple
-ul.select2-selection__rendered
-.select2-search
-input {
+    + .select2-container--default
+    .select2-selection--multiple
+    ul.select2-selection__rendered
+    .select2-search
+    input {
     width: 100% !important;
     margin: 0 !important;
     height: 30px;
 }
 .multiple-select2
-+ .select2-container--default
-.select2-selection--multiple
-ul.select2-selection__rendered
-.select2-search {
+    + .select2-container--default
+    .select2-selection--multiple
+    ul.select2-selection__rendered
+    .select2-search {
     width: 30px;
     flex-grow: 1;
     margin-right: -15px;
     height: 30px;
 }
 .multiple-select2
-+ .select2-container--default
-.select2-selection--multiple
-ul.select2-selection__rendered {
+    + .select2-container--default
+    .select2-selection--multiple
+    ul.select2-selection__rendered {
     display: flex;
     height: 38px;
     align-items: center;
@@ -13772,10 +13769,10 @@ ul.select2-selection__rendered {
     gap: 5px;
 }
 .multiple-select2
-+ .select2-container--default
-.select2-selection--multiple
-ul.select2-selection__rendered
-.name {
+    + .select2-container--default
+    .select2-selection--multiple
+    ul.select2-selection__rendered
+    .name {
     padding: 5px;
     border-radius: 3px;
     background: #009faa26;
@@ -13787,11 +13784,11 @@ ul.select2-selection__rendered
 }
 
 .pickup-zone-tag
-.multiple-select2
-+ .select2-container--default
-.select2-selection--multiple
-ul.select2-selection__rendered
-.name {
+    .multiple-select2
+    + .select2-container--default
+    .select2-selection--multiple
+    ul.select2-selection__rendered
+    .name {
     background: rgba(51, 66, 87, 0.06) !important;
     border-radius: 33px !important;
     color: rgba(51, 66, 87, 0.9) !important;
@@ -13814,9 +13811,9 @@ ul.select2-selection__rendered
 
 /* Optional: Add a plus sign for remaining items */
 .multiple-select2
-+ .select2-container--default
-.select2-selection--multiple
-.select2-selection__rendered::after {
+    + .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__rendered::after {
     content: attr(data-placeholder);
     color: #334257;
     font-weight: 600;
@@ -14743,7 +14740,7 @@ ul.address-info .label {
 }
 
 .form-group.text-title
-input[type="datetime-local" i]::-webkit-calendar-picker-indicator {
+    input[type="datetime-local" i]::-webkit-calendar-picker-indicator {
     opacity: 0.6 !important;
 }
 

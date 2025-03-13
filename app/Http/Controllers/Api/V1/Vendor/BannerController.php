@@ -7,12 +7,10 @@ use App\Models\Translation;
 use Illuminate\Http\Request;
 use App\CentralLogics\Helpers;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class BannerController extends Controller
 {
-    // v2.8.1 checked
     public function list(Request $request)
     {
         $vendor = $request['vendor'];
@@ -26,7 +24,7 @@ class BannerController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'title' => 'required',
-            'image' => 'required|mimes:jpg,jpeg,png,bmp,tiff|max:2048',
+            'image' => 'required|mimes:webp,jpg,jpeg,png,bmp,tiff|max:2048',
         ]);
 
         if ($validator->fails()) {
@@ -35,10 +33,10 @@ class BannerController extends Controller
 
         $vendor = $request['vendor'];
 
+
         $data = json_decode($request->translations, true);
 
         $banner = new Banner;
-//        $banner->title = $request->title;
         $banner->title = $data[0]['value'];
         $banner->type = 'store_wise';
         $banner->zone_id = $vendor->stores[0]->zone_id;
@@ -48,6 +46,7 @@ class BannerController extends Controller
         $banner->default_link = $request->default_link;
         $banner->created_by = 'store';
         $banner->save();
+
 
         foreach ($data as $key=>$item) {
             Translation::updateOrInsert(
@@ -74,11 +73,11 @@ class BannerController extends Controller
         if ($validator->fails()) {
             return response()->json(['errors' => Helpers::error_processor($validator)], 403);
         }
+
+
         $data = json_decode($request->translations, true);
 
-        $vendor = $request['vendor'];
         $banner = Banner::find($request->id);
-//        $banner->title = $request->title;
         $banner->title = $data[0]['value'];
         $banner->image = $request->has('image') ? Helpers::update('banner/', $banner->image, 'png', $request->file('image')) : $banner->image;
         $banner->default_link = $request->default_link;

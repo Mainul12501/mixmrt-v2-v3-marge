@@ -11,10 +11,8 @@ use App\CentralLogics\OrderLogic;
 use App\Models\AccountTransaction;
 use Illuminate\Support\Facades\DB;
 use App\Mail\OrderVerificationMail;
-use Illuminate\Support\Facades\App;
 use App\CentralLogics\CustomerLogic;
 use Illuminate\Support\Facades\Mail;
-use App\Models\SubscriptionTransaction;
 use App\Models\SubscriptionBillingAndRefundHistory;
 use Brian2694\Toastr\Facades\Toastr;
 use Modules\Rental\Entities\Trips;
@@ -181,6 +179,7 @@ if (! function_exists('trip_payment_success')) {
 }
 
 
+
 if (! function_exists('trip_payment_fail')) {
     function trip_payment_fail($data) {
         $trip = Trips::find($data->attribute_id);
@@ -193,6 +192,8 @@ if (! function_exists('trip_payment_fail')) {
         return true;
     }
 }
+
+
 
 if (! function_exists('order_failed')) {
     function order_failed($data) {
@@ -252,6 +253,8 @@ if (!function_exists('addon_published_status')) {
     }
 }
 
+
+
 if (!function_exists('config_settings')) {
     function config_settings($key, $settings_type)
     {
@@ -298,5 +301,6 @@ if (!function_exists('config_settings')) {
             return config('default_pagination');
         }
     }
+
 
 }

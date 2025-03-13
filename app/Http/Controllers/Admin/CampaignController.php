@@ -26,7 +26,6 @@ use Illuminate\Support\Facades\Validator;
 
 class CampaignController extends Controller
 {
-    // v2.8.1 checked
     function index($type)
     {
         return view('admin-views.campaign.'.$type.'.index');

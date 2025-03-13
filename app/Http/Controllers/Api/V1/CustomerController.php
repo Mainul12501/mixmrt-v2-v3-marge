@@ -29,11 +29,9 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\Password;
 use Modules\Gateways\Traits\SmsGateway;
 use MatanYadaev\EloquentSpatial\Objects\Point;
-use Illuminate\Support\Facades\Storage;
 
 class CustomerController extends Controller
 {
-    // v2.8.1 checked
     public function address_list(Request $request)
     {
         $limit = $request['limit'] ?? 10;
